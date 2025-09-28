@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
-const API_BASE = process.env.REACT_APP_API_BASE || (process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000');
+const API_BASE = '/api';
 
 const Create = ({ onCreated }) => {
     const [task, setTask] = useState('');
