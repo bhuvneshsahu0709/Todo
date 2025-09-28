@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "TODO/todo_backend/api/index.js", "use": "@vercel/node" },
+    { "src": "TODO/todo_frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "TODO/todo_backend/api/index.js" },
+    { "src": "/(.*)", "dest": "TODO/todo_frontend/build/$1" }
+  ]
+}
+
